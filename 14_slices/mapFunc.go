@@ -85,7 +85,10 @@ func mapDelete(){
 
 	fmt.Println(m)
 
-	delete(m, "goal")
+	if v, ok := m["goal"]; ok {
+		fmt.Println(v)
+		delete(m, "goal")
+	}
 
 	fmt.Println(m)
 }
