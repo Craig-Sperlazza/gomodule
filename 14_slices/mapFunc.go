@@ -71,5 +71,21 @@ func mapTest(){
 }
 
 func mapDelete(){
+	m := map[string]int{
+		"guy": 1,
+		"gal": 2,
+		"goal": 3,
+	}
 
+	for i, v := range m{
+		fmt.Println(i, v)
+	}
+
+	delete(m, "guy")
+
+	fmt.Println(m)
+
+	delete(m, "goal")
+
+	fmt.Println(m)
 }
