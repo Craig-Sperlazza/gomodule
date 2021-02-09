@@ -17,6 +17,10 @@ func main(){
 	ex6()
 	fmt.Println("------------Exercise 7---multidimensional slice----------------------------------")
 	ex7()
+	fmt.Println("------------Exercise 8---map----------------------------------")
+	ex8()
+	fmt.Println("------------Exercise 9---add to map----------------------------------")
+	ex9()
 }
 
 // array
@@ -116,5 +120,40 @@ func ex7(){
 			fmt.Printf("\t index position: %v \t value:  %v \n", ind, val)
 		}
 		
+	}
+}
+
+func ex8(){
+	ms := map[string][]string{
+		"bond_james": 		[]string{"Shaken not stirred", "Martinis", "Women"},
+		"moneypenny_miss": 	[]string{"James Bond", "Literature", "Computer Science"},
+		"dr_no": 			[]string{"Being evil", "Ice cream", "Sunsets"},
+	}
+		
+	// fmt.Println(ms)
+
+	for k, v := range ms{
+		fmt.Println(k, "favorite things are:")
+		for k2, val := range v{
+			fmt.Printf("\t%v:%v\n",k2, val)
+		}
+	}
+}
+
+func ex9(){
+	ms := map[string][]string {
+		"bond_james": 		[]string{"Shaken not stirred", "Martinis", "Women"},
+		"moneypenny_miss": 	[]string{"James Bond", "Literature", "Computer Science"},
+		"dr_no": 			[]string{"Being evil", "Ice cream", "Sunsets"},
+	}
+
+	ms["craig"]= []string{"red", "blue", "green"}
+	ms["henrik"]=[]string{"teal", "orange", "black"}
+
+	for i, v := range ms {
+		fmt.Printf("%v favorite things are:\n", i)
+		for i2, v2 := range v{
+			fmt.Printf("\t%v:%v\n", i2, v2)
+		}
 	}
 }
