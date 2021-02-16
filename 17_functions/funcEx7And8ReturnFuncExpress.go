@@ -17,6 +17,7 @@ func sayHello() string{
 	return "Hello My Dude"
 }
 
+// function that returns a function
 func returnDoubleFunc(x int) func() int{
 	return func() int {
 		return 2 * x

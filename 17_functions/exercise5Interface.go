@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// this functiomn returns pi which can then be called in the circle area function
+// this function returns pi which can then be called in the circle area function
 // there is no way to put a const in a go struct so this is a good option
 func pi() float64 {
 	return 3.14159
