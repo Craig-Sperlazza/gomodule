@@ -27,8 +27,11 @@ func main(){
 	fmt.Println(z)
 
 	fmt.Println("--------Exercise 2: variadic parameter, pass in slice-------------------")
-	a := ex2(xi...)
+	a := vardicic(xi...)
 	fmt.Println(a)
+
+	b := sliceInt(xi)
+	fmt.Println(b)
 
 	// comment out the defer because it will run after everything, confusing
 	// fmt.Println("--------Exercise 3: defer a function-------------------")
@@ -56,7 +59,15 @@ func bar() (int, string){
 }
 
 // exercise 2
-func ex2(x ...int) int {
+func vardicic(x ...int) int {
+	var total int
+	for _, v := range x{
+		total += v
+	}
+	return total
+}
+
+func sliceInt(x []int) int{
 	var total int
 	for _, v := range x{
 		total += v
