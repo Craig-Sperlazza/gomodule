@@ -6,8 +6,6 @@ import (
 	"os"
 )
 
-//  note I dont really know how the os.Stdout.Write works-----need to research, this was from go docs example
-
 // marshal() turns our struct into json----returns a slice of bytes---that is wht you use os.Stdout.Write because it expects a slice of bytes
 // unmarshal() turns our json (a slice of bytes) into a go struct----note though that it is stored in a pointer, so it must be an address you pass into unmarshal()
 
