@@ -14,11 +14,10 @@ import (
 
 var wg sync.WaitGroup
 
-
 func main() {
 	fmt.Println("OS\t\t", runtime.GOOS)
 	fmt.Println("ARCH\t\t", runtime.GOARCH)
-	fmt.Println("CPUs\t\t",runtime.NumCPU())
+	fmt.Println("CPUs\t\t", runtime.NumCPU())
 	fmt.Println("Goroutine\t", runtime.NumGoroutine())
 
 	// go foo()launches it as a go routine---creates a concurrent design pattern
@@ -27,11 +26,11 @@ func main() {
 	// must use sync package (waitgroup here) to essentially wait for other routines before exiting main()
 	// wg.Add(1) adds 1 waitgroup, the we use wg.Wait() to wait for wg.Done() to finish (which is in the function we designated as a go routine)
 	// wg.add(int) adds something to wait for, wg.Wait() waits for it, wg.Done() removes it
-	wg.Add(1) 
+	wg.Add(1)
 	go foo()
 	bar()
 
-	fmt.Println("CPUs\t\t",runtime.NumCPU())
+	fmt.Println("CPUs\t\t", runtime.NumCPU())
 	fmt.Println("Goroutine\t", runtime.NumGoroutine())
 	wg.Wait()
 }
