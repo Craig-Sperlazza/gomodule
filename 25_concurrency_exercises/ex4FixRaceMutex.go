@@ -1,5 +1,6 @@
 // We are passing around an incrementer value to 100 sub go routines
 // ....it creates a race condition and yeilds very odd results
+// HERE WE FIX THE RACE CONDITION WITH sync.Mutex
 
 package main
 
